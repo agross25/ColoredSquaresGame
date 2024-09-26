@@ -178,7 +178,7 @@ public class HelloController {
     {
         text.setVisible(true);
         PauseTransition pause = new PauseTransition(Duration.seconds(2));
-        pause.setOnFinished(event -> text.setVisible(false));  // Hide the text after 3 seconds
+        pause.setOnFinished(event -> text.setVisible(false));  // Hide the text after 2 seconds
         pause.play();
     }
 
@@ -206,7 +206,7 @@ public class HelloController {
 
     // Method to schedule the square's disappearance after a certain time
     private void scheduleDisappear(Rectangle square, Text txt, Pane pane, double secsDisplayed) {
-        PauseTransition pause = new PauseTransition(Duration.millis(secsDisplayed*1000)); // Set time to disappear - between 1.5 and 3 seconds
+        PauseTransition pause = new PauseTransition(Duration.millis(secsDisplayed*1000)); // Set time to disappear - between 2.5 and 4 seconds
         pause.setOnFinished(event -> pane.getChildren().removeAll(square, txt)); // Remove the square when time is up
         pause.play();  // Start the pause transition
 
